@@ -33,28 +33,29 @@ class Menu():
             if opcao == 2:
                 codPatrimonio = raw_input("Codigo do Patrimonio: ")
                 descricao = raw_input("Descricao: ")
-                hd = input("HD: ")
-                memoria = input("Memoria: ")
+                hd = raw_input("HD: ")
+                memoria = raw_input("Memoria: ")
                 localizacao = raw_input("Localizacao: ")
                 estacao = Estacao(codPatrimonio, descricao, hd, memoria, localizacao)
                 
             if opcao == 3:
                 codPatrimonio = raw_input("Codigo do Patrimonio: ")
                 descricao = raw_input("Descricao: ")
-                hd = input("HD: ")
-                memoria = input("Memoria: ")
-                tamanhoBuffer = input("Tamanho do Buffer: ")
-                quantidadeBuffer = input("Quantidade de Buffer: ")
+                hd = raw_input("HD: ")
+                memoria = raw_input("Memoria: ")
+                tamanhoBuffer = raw_input("Tamanho do Buffer: ")
+                quantidadeBuffer = raw_input("Quantidade de Buffer: ")
                 servidor = Servidor(codPatrimonio, descricao, hd, memoria, tamanhoBuffer, quantidadeBuffer)              
                 
             if opcao == 4:
                 codPatrimonio = raw_input("Codigo do Patrimonio: ")
                 descricao = raw_input("Descricao: ")
-                velocidade = input("Velocidade: ")
+                velocidade = raw_input("Velocidade: ")
                 impressora = Impressora(codPatrimonio, descricao, velocidade)
                 
             
             if opcao == 5:
+                print "Listando usuarios"
                 for i in range(len(usuario.todosUsuarios)):
                     print usuario.todosUsuarios[i].nomeGuerra
        
@@ -86,6 +87,7 @@ class Menu():
                     print "\n"
             
             if opcao == 8:
+                print "Listando impressoras"
                 for i in range(len(impressora.todasImpressoras)):
                     print "Codigo: " + impressora.todasImpressoras[i].codPatrimonio
                     print "Descricao: " + impressora.todasImpressoras[i].descricao

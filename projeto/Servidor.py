@@ -8,7 +8,6 @@ class Servidor(Micro):
         self.quantidadeBuffer = quantidadeBuffer
         self.impressoras = []
         self.armazenaServidores(self)
-        #self.armazenaImpressorasConectadas(self)
                 
     def armazenaServidores(self, servidor):
         self.todosServidores.append(servidor)
@@ -27,7 +26,7 @@ class Servidor(Micro):
                         print "Impressora conectada com sucesso ao servidor!"
                     else:
                         print "Para este servidor ja existem 3 impressoras cadastradas!"
-            #opcao = raw_input("Deseja cadastrar impressoras: sim/nao: ")
+            
                 else:
                     print "Esta impressora ja esta conectada a um servidor!"
             else:
